@@ -10,6 +10,13 @@ import CreateAcademicFaculty from '../pages/admin/academicManagement/CreateAcade
 import CreateAcademicSemester from '../pages/admin/academicManagement/CreateAcademicSemester';
 import StudentData from '../pages/admin/userManagement/StudentData';
 import StudentDetails from '../pages/admin/userManagement/StudentDetails';
+import SemesterRegistration from '../pages/admin/courseManagement/SemesterRegistration';
+
+import CreateCourse from '../pages/admin/courseManagement/CreateCourse';
+import Courses from '../pages/admin/courseManagement/Courses';
+import OfferCourse from '../pages/admin/courseManagement/OfferCourse';
+import OfferedCourse from '../pages/faculty/OfferedCourse';
+import { RegisteredSemesters } from '../pages/admin/courseManagement/RegisteredSemester';
 
 export const adminPaths = [
   {
@@ -56,16 +63,6 @@ export const adminPaths = [
     name: 'User Management',
     children: [
       {
-        name: 'Create Admin',
-        path: 'create-admin',
-        element: <CreateAdmin />,
-      },
-      {
-        name: 'Create Faculty',
-        path: 'create-faculty',
-        element: <CreateFaculty />,
-      },
-      {
         name: 'Create Student',
         path: 'create-student',
         element: <CreateStudent />,
@@ -77,13 +74,41 @@ export const adminPaths = [
       },
       {
         path: 'student-data/:studentId',
-        element: <StudentDetails/>,
+        element: <StudentDetails />,
       },
+      {
+        name: 'Create Admin',
+        path: 'create-admin',
+        element: <CreateAdmin />,
+      },
+      {
+        name: 'Create Faculty',
+        path: 'create-faculty',
+        element: <CreateFaculty />,
+      },
+
       {
         name: 'Create Member',
         path: 'create-member',
         element: <CreateStudent />,
       },
+    ],
+  },
+  {
+    name: 'Course Management',
+    children: [
+      {
+        name: 'Semester Registration',
+        path: 'semester-registration',
+        element: <SemesterRegistration />,
+      },
+     
+      {
+        name: ' Registered Semesters',
+        path: 'registered-semesters',
+        element: <RegisteredSemesters />,
+      },
+     
     ],
   },
 ];
