@@ -31,8 +31,6 @@ const OfferCourse = () => {
     { name: 'status', value: 'UPCOMING' },
   ]);
 
-  console.log(semesterRegistrationData);
-
   const { data: academicFacultyData } = useGetAcademicFacultiesQuery(undefined);
 
   const { data: academicDepartmentData } =
@@ -43,12 +41,12 @@ const OfferCourse = () => {
   const { data: facultiesData, isFetching: fetchingFaculties } =
     useGetCourseFacultiesQuery(courseId, { skip: !courseId });
 
-    const semesterRegistrationOptions = semesterRegistrationData?.data?.map(
-      (item) => ({
-        value: item._id,
-        label: `${item.academicSemester.name} ${item.academicSemester.year}`,
-      })
-    );
+  const semesterRegistrationOptions = semesterRegistrationData?.data?.map(
+    (item) => ({
+      value: item._id,
+      label: `${item.academicSemester.name} ${item.academicSemester.year}`,
+    })
+  );
 
   const academicFacultyOptions = academicFacultyData?.data?.map((item) => ({
     value: item._id,
