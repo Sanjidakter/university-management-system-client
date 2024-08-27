@@ -1,3 +1,16 @@
-console.log(a);
-console.log(b);
-const a=b=5
+function fizzBuzz()
+{
+    for(let i=1;i<=100;i++){
+        if(i%3==0 && i%5==0){
+            console.log('FizzBuzz');
+        }
+        if(i%3==0){
+            console.log('Fizz');
+        }
+        if(i%5==0){
+            console.log('Buzz');
+        }
+        console.log(i);
+    }
+}
+fizzBuzz();

@@ -6,6 +6,7 @@ import {
 
 type TCourse = {
   [index: string]: any;
+  
 };
 
 const OfferedCourse = () => {
